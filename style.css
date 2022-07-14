@@ -5,7 +5,7 @@
   font-family: 'Work Sans', sans-serif;
 }
 
-body {
+/* body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 15vh 75vh 10vh;
@@ -13,23 +13,43 @@ body {
     'h'
     's'
     'f';
-}
+} */
 
 header {
   background-color: rgb(89, 58, 27);
-  grid-area: h;
+  /* grid-area: h; */
+  height: 13vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* border-bottom: 5px;
-  border-color: white; */
+  border-bottom-style: solid;
+  border-bottom-width: 0.45rem;
+  border-bottom-color: rgb(27, 20, 12);
 }
+
 section {
   background-color: rgb(171, 141, 110);
-  grid-area: s;
+  /* grid-area: s; */
+
+  display: flex;
 }
+
+.info {
+  /* width: 100%; /*If a flex item width is above 50% and the other is 50%, i think that the other will occupy the 50% of what rests to it (CORRECTION: ACTUALLY IT IS IN PROPORTION, */
+  width: 75vw;
+  /* height: 50%; */
+}
+
+.image {
+  /* width: 100%; */
+  width: 100vw;
+  height: 30rem;
+  background-image: url(coffe.jpg);
+  background-size: cover;
+}
+
 footer {
   background-color: antiquewhite;
   grid-area: f;
