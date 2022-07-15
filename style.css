@@ -43,14 +43,15 @@ section {
   background-color: #906d3c;
   /* grid-area: s; */
 
-  display: flex;
-
-  margin: 0.75%;
+  margin: 0.75% 23% 0.75% 0;
 
   border-radius: 8px;
   border-style: solid;
   border-width: 0.45rem;
   border-color: var(--border-color);
+
+  position: relative;
+  left: 22.25%; /* 23% - 0.75 */
 }
 
 .info {
@@ -62,10 +63,15 @@ section {
   border-right-color: var(--border-color);
 }
 
+.text {
+  position: absolute;
+  right: 50%;
+}
+
 .image {
   /* width: 100%; */
-  width: 100vw;
-  height: 30rem;
+  width: 100%;
+  height: 75vh;
   background-image: url(coffe.jpg);
   background-size: cover;
   border-left-style: solid;
