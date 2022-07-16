@@ -102,14 +102,21 @@ footer {
 
 #info {
   /* width: 100%; /*If a flex item width is above 50% and the other is 50%, i think that the other will occupy the 50% of what rests to it (CORRECTION: ACTUALLY IT IS IN PROPORTION, */
-  width: 100%;
   /* height: 50%; */
   grid-area: m;
-  justify-items: center;
+  display: inline; /*I made the display inline so the cell will be just the text size and will be able to move sideways so it can be centered*/
+  justify-self: center;
 }
 
 #mail-info {
   grid-area: e;
+  display: inline;
+}
+
+#social-media {
+  grid-area: s;
+  display: inline;
+  justify-self: end;
 }
 
 span {
