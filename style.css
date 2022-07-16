@@ -1,10 +1,11 @@
 :root {
   --border-color: rgb(27, 20, 12);
   --body-background-color: #be9356;
-  --header-background-color: rgb(89, 58, 27);
+  --primary-background-color: rgb(89, 58, 27);
   --section-background-color: #906d3c;
   --space-between-texts: 4%;
   --secondary-color: antiquewhite;
+  --border-width: 0.45rem;
 }
 
 * {
@@ -29,7 +30,7 @@ body {
 } */
 
 header {
-  background-color: var(--header-background-color);
+  background-color: var(--primary-background-color);
   /* grid-area: h; */
   height: 5.23rem;
 
@@ -38,7 +39,7 @@ header {
   align-items: center;
 
   border-bottom-style: solid;
-  border-bottom-width: 0.45rem;
+  border-bottom-width: var(--border-width);
   border-bottom-color: var(--border-color);
 }
 
@@ -58,7 +59,7 @@ section {
 .image {
   border-radius: 8px;
   border-style: solid;
-  border-width: 0.45rem;
+  border-width: var(--border-width);
   border-color: var(--border-color);
 }
 
@@ -81,42 +82,6 @@ section {
   border-color: var(--border-color);
   position: absolute;
   left: 19.25%; /*20 - 0.75% */
-}
-
-footer {
-  background-color: var(--secondary-color);
-  /* grid-area: f; */
-  height: 3.625rem;
-
-  color: var(--border-color);
-  border-right-style: solid;
-  border-right-color: var(--border-color);
-
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    'm m'
-    'e s';
-}
-
-#info {
-  /* width: 100%; /*If a flex item width is above 50% and the other is 50%, i think that the other will occupy the 50% of what rests to it (CORRECTION: ACTUALLY IT IS IN PROPORTION, */
-  /* height: 50%; */
-  grid-area: m;
-  display: inline; /*I made the display inline so the cell will be just the text size and will be able to move sideways so it can be centered*/
-  justify-self: center;
-}
-
-#mail-info {
-  grid-area: e;
-  display: inline;
-}
-
-#social-media {
-  grid-area: s;
-  display: inline;
-  justify-self: end;
 }
 
 span {
@@ -148,6 +113,34 @@ input {
 
 .text {
   padding: 1%;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--primary-background-color);
+  /* grid-area: f; */
+  height: 3.625rem;
+
+  border-top-style: solid;
+  border-top-color: var(--border-color);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contact text of footer */
+#contact {
+  align-self: center;
+}
+
+/* Ways of contacting */
+#info {
+  /* No need for display inline in any because all of them widths and heights are occupying just the necesary space */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* align-content: center; */
 }
 
 @media (max-width: 810px) {
