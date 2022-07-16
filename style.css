@@ -31,7 +31,7 @@ body {
 header {
   background-color: var(--header-background-color);
   /* grid-area: h; */
-  height: 13vh;
+  height: 5.23rem;
 
   display: flex;
   justify-content: center;
@@ -47,7 +47,7 @@ section {
   /* grid-area: s; */
 
   /* margin: 0.75%; */
-  padding: 0.75%;
+  padding: 0.63rem;
   height: 80vh;
   width: 100%;
 
@@ -77,6 +77,7 @@ section {
   background-color: var(--section-background-color);
   width: 50%;
   top: 30%;
+  min-width: 17.8rem;
 }
 
 .image {
@@ -93,7 +94,7 @@ section {
 
 footer {
   background-color: var(--secondary-color);
-  grid-area: f;
+  /* grid-area: f; */
 }
 
 span {
@@ -125,4 +126,20 @@ input {
 
 .text {
   padding: 1%;
+}
+
+@media (max-width: 810px) {
+  .image {
+    left: 18.75%;
+  }
+}
+
+@media (max-width: 690px) {
+  .text {
+    top: 25%;
+  }
+
+  .image {
+    left: 18%;
+  }
 }
