@@ -6,6 +6,7 @@
   --space-between-texts: 4%;
   --secondary-color: antiquewhite;
   --border-width: 0.45rem;
+  --margin-section-elements: 0.675rem;
 }
 
 * {
@@ -17,6 +18,7 @@
 
 body {
   background-color: var(--body-background-color);
+  height: 100vh; /* Body wasn't ocuppying all the page initially (why?) */
 }
 
 /* body {
@@ -81,7 +83,10 @@ section {
   border-left-style: solid;
   border-color: var(--border-color);
   position: absolute;
-  left: 19.25%; /*20 - 0.75% */
+  /* left: 19.25%; 20 - 0.75% --no need for this, because i set that the distance from right is 0.675rem, which is equal to 10.8px that is the padding of section and the left ""margin (it's not the margin it's the padding)"" of text*/
+  right: var(--margin-section-elements);
+  bottom: var(--margin-section-elements);
+  top: var(--margin-section-elements);
 }
 
 span {
@@ -101,7 +106,7 @@ span {
 }
 
 input {
-  height: 4vh;
+  height: 1.61rem;
   width: 80%;
   background-color: var(--secondary-color);
   border: none;
@@ -120,13 +125,18 @@ input {
 footer {
   background-color: var(--primary-background-color);
   /* grid-area: f; */
-  height: 3.625rem;
+  height: 12vh;
 
   border-top-style: solid;
   border-top-color: var(--border-color);
 
   display: flex;
   flex-direction: column;
+}
+
+#footer-content {
+  display: flex;
+  /* align-content: flex-end; */
 }
 
 /* Contact text of footer */
@@ -143,18 +153,8 @@ footer {
   /* align-content: center; */
 }
 
-@media (max-width: 810px) {
-  .image {
-    left: 18.75%;
-  }
-}
-
 @media (max-width: 690px) {
   .text {
     top: 25%;
-  }
-
-  .image {
-    left: 18%;
   }
 }
