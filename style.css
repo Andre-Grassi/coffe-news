@@ -9,8 +9,6 @@
   --margin-section-elements: 0.675rem;
 
   height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 * {
@@ -23,6 +21,10 @@
 body {
   background-color: var(--body-background-color);
   height: 100%; /* Body wasn't ocuppying all the page initially (why?) */
+
+  /* Display flex used so the boxes will occuppy all the page if there is remaining space (using "flex-grow" into "header") */
+  display: flex;
+  flex-direction: column;
 }
 
 /* body {
@@ -36,17 +38,23 @@ body {
 } */
 
 header {
-  background-color: var(--primary-background-color);
   /* grid-area: h; */
+
+  /* Minimun height of the header (will be 5.23rem in any vw and vh of the user) */
   height: 5.23rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
+  background-color: var(--primary-background-color);
+
   border-bottom-style: solid;
   border-bottom-width: var(--border-width);
   border-bottom-color: var(--border-color);
+
+  /* flex-grow being used so the header will occuppy all the remaining space in the page */
+  flex-grow: 1;
 }
 
 section {
@@ -134,7 +142,7 @@ footer {
   border-top-style: solid;
   border-top-color: var(--border-color);
 
-  /* justify-self: flex-end; Doesn't work */
+  /* O justify-self não funcionava, logo o footer não ficava preso no bottom, para prendê-lo eu poderia usar um "margin-top: auto" que tbm n estava funcionando ou usar o flex-grow, dessa forma seu container cresceria para ocupar todo o restante da tela, mas preferi colocar isso no header */
   display: flex;
   flex-direction: column;
 }
