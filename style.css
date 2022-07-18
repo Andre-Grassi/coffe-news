@@ -41,7 +41,7 @@ header {
   /* grid-area: h; */
 
   /* Minimun height of the header (will be 5.23rem in any vw and vh of the user) */
-  height: 5.23rem;
+  height: 5.23rem; /* MAYBE MAKE THIS MIN-HEIGHT BUT I DON'T KNOW IF IT WILL BREAK SOMETHING ELSE */
 
   display: flex;
   justify-content: center;
@@ -202,5 +202,35 @@ footer {
 @media (max-height: 337px) {
   section {
     height: 16.38rem;
+  }
+}
+
+@media (max-height: 512px) and (max-width: 363px) {
+  /* Body was display block because of the @media (max-height: 482px) */
+  body {
+    display: flex;
+  }
+
+  section {
+    /* Making box-sizing content-box I can control the exact size that the section should have inside, which will contain the .text div */
+    box-sizing: content-box;
+    height: 16.96rem;
+
+    /* The padding would overlap the vw because the width being computed belongs to the content, and the padding won't be computed in the property "width" because of box-sizing: content-box */
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .text {
+    position: static;
+    margin: auto;
+  }
+
+  header {
+    min-height: 5.23rem;
   }
 }
