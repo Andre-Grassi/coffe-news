@@ -126,7 +126,6 @@ input {
 }
 
 /* FOOTER */
-
 footer {
   background-color: var(--primary-background-color);
   /* grid-area: f; */
@@ -135,6 +134,7 @@ footer {
   border-top-style: solid;
   border-top-color: var(--border-color);
 
+  /* justify-self: flex-end; Doesn't work */
   display: flex;
   flex-direction: column;
 }
