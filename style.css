@@ -90,7 +90,7 @@ section {
 .image {
   /* width: 100%; */
   width: 80%;
-  height: 74.62vh;
+  height: 74.62vh; /*CHANGE THIS UNIT LATER */
   background-image: url(./images/coffe.jpg);
   background-size: cover;
   border-left-style: solid;
