@@ -187,3 +187,20 @@ footer {
     top: 25%;
   }
 }
+
+@media (max-height: 482px) {
+  body {
+    display: block;
+  }
+
+  .text {
+    top: 0;
+    margin-top: var(--margin-section-elements);
+  }
+}
+
+@media (max-height: 337px) {
+  section {
+    height: 16.38rem;
+  }
+}
