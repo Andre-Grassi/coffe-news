@@ -90,16 +90,22 @@ section {
 .image {
   /* width: 100%; */
   width: 80%;
-  height: 74.62vh; /*CHANGE THIS UNIT LATER */
+  height: 100%;
+
   background-image: url(./images/coffe.jpg);
   background-size: cover;
+
   border-left-style: solid;
   border-color: var(--border-color);
-  position: absolute;
+
   /* left: 19.25%; 20 - 0.75% --no need for this, because i set that the distance from right is 0.675rem, which is equal to 10.8px that is the padding of section and the left ""margin (it's not the margin it's the padding)"" of text*/
-  right: var(--margin-section-elements);
-  bottom: var(--margin-section-elements);
-  top: var(--margin-section-elements);
+
+  /* Removed position absolute, because I can position the div just using margin, and this way the box will ALWAYS be INSIDE "section" and will never overlap it (with absolute even when height was lower than 100% it was overlapping the section's height */
+  margin-left: 20%;
+
+  /*Bottom and top margin are in percentage*/
+  /* bottom: 2.15%;
+  top: 2.15%; */
 }
 
 span {
