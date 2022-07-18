@@ -91,7 +91,7 @@ section {
   /* width: 100%; */
   width: 80%;
   height: 74.62vh;
-  background-image: url(coffe.jpg);
+  background-image: url(./images/coffe.jpg);
   background-size: cover;
   border-left-style: solid;
   border-color: var(--border-color);
@@ -164,6 +164,16 @@ footer {
   justify-content: space-around;
   align-items: center;
   /* align-content: center; */
+}
+
+#social-media {
+  display: flex;
+}
+
+/* Space between icons in footer */
+#github {
+  /* Needed to use vw here because parent is a link and not the footer itselk (the "a" is using just space as needed) */
+  margin-right: 0.5vw;
 }
 
 @media (max-width: 690px) {
